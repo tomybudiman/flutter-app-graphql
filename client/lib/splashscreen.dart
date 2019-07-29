@@ -67,6 +67,7 @@ class _FadeInSplashScreenState extends State<FadeInSplashScreen> with TickerProv
     ).animate(controller);
     animation.addStatusListener((status){
       if(AnimationStatus.completed == status){
+        // If fade in transition animation completed
       }
     });
     controller.forward();
