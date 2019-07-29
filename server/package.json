@@ -1,0 +1,39 @@
+{
+  "name": "gbi-sion-app-server",
+  "version": "0.1.0",
+  "description": "GBI Sion App GraphQl Server",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.14",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.4",
+    "mongoose-paginate-v2": "^1.3.0",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "NODE_ENV=development nodemon src/index.js",
+    "run": "NODE_ENV=production node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomybudiman/gbi-sion-app-server.git"
+  },
+  "keywords": [
+    "GraphQl",
+    "Backend",
+    "Services"
+  ],
+  "author": "Tomy Djaya Budiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomybudiman/gbi-sion-app-server/issues"
+  },
+  "homepage": "https://github.com/tomybudiman/gbi-sion-app-server#readme"
+}

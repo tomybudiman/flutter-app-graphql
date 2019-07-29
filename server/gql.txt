@@ -1,0 +1,67 @@
+# mutation {
+#   createUser(
+#     firstName: "Tomy"
+#     lastName: "Budiman"
+#     email: "tomybudiman@protonmail.com"
+#     password: "budiman400378"
+#   ){
+#     status
+#   }
+# }
+
+# query {
+#   users(
+#     limit: 2
+#     page: 1
+#   ){
+#     docs {
+#       _id
+#       firstName
+#       lastName
+#       email
+#       dob
+#       isVerified
+#     }
+#     totalDocs
+#     limit
+#     hasPrevPage
+#     hasNextPage
+#     page
+#     totalPages
+#     pagingCounter
+#     prevPage
+#     nextPage
+#   }
+# }
+
+# query {
+#   user(
+#     id: "5d36e469a03df03fc23f1c51"
+#   ){
+#     _id
+#     firstName
+#     lastName
+#     email
+#     isVerified
+#   }
+# }
+
+# mutation {
+#   login(
+#     email: "tomybudiman@protonmail.com"
+#     password: "budiman400378"
+#   ){
+#     token
+#     loginTime
+#   }
+# }
+
+# mutation {
+#   loginVerify(
+#     token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkMzcxMmM4YTJkN2MwNGM4MmVjZmYxMSIsImVtYWlsIjoidG9teWJ1ZGltYW5AcHJvdG9ubWFpbC5jb20iLCJmaXJzdE5hbWUiOiJUb215IiwibGFzdE5hbWUiOiJCdWRpbWFuIiwibG9naW5UaW1lIjoiMjAxOS0wNy0yM1QyMTowNjoxNSswNzowMCIsImlhdCI6MTU2Mzg5MDc3NSwiaXNzIjoiVG9teSBCdWRpbWFuIiwic3ViIjoidG9teWJ1ZGltYW5AcHJvdG9ubWFpbC5jb20ifQ.H4e-nbtiCGyEyKMszxZ4pHep8PXN-xNsfvpWqMpk5Wg2ghYZWt338Ox-6IVnlANhyQTbGpUnV-l_3rq9qZvO35awPo0VG_SW_nUOkOFzsEiBKUX5wQ3j6AyqRfg41kbaZJAMvPZVj81YZ8vFp0ebIgo87XrDErQME4not4fZDx0"
+#     loginTime: "2019-07-23T21:06:15+07:00"
+#   ){
+#     token
+#     loginTime
+#   }
+# }
