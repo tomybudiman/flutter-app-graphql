@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:gbi_sion_app/home.dart';
 
 typedef void FadeInCallback();
 
-class SplashScreen extends StatelessWidget {
-  void navigateHome(){
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  void navigateHome(context){
+    Navigator.pushReplacementNamed(context, "/home");
   }
   @override
   Widget build(BuildContext context) {
@@ -40,7 +45,7 @@ class SplashScreen extends StatelessWidget {
             duration: 1000,
             onFadeIn: (){
               Future.delayed(Duration(milliseconds: 500), (){
-                navigateHome();
+                navigateHome(context);
               });
             },
           )
