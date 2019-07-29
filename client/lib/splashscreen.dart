@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gbi_sion_app/home.dart';
 
+typedef void FadeInCallback();
+
 class SplashScreen extends StatelessWidget {
+  void navigateHome(){
+  }
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -19,23 +23,26 @@ class SplashScreen extends StatelessWidget {
                   height: 56,
                 ),
                 Container(
-                  margin: EdgeInsets.only(
-                      left: 16
-                  ),
+                  margin: EdgeInsets.only(left: 16),
                   child: Text(
                     "Brand Text",
                     style: TextStyle(
                       fontSize: 40,
-                      color: Color.fromRGBO(100,100,100,1),
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w300,
                       fontFamily: "RobotoCondensed",
+                      color: Color.fromRGBO(100,100,100,1),
                     ),
                   ),
                 ),
               ],
             ),
             duration: 1000,
+            onFadeIn: (){
+              Future.delayed(Duration(milliseconds: 500), (){
+                navigateHome();
+              });
+            },
           )
         ),
       ),
@@ -44,9 +51,10 @@ class SplashScreen extends StatelessWidget {
 }
 
 class FadeInSplashScreen extends StatefulWidget {
+  FadeInSplashScreen({this.child, this.duration, this.onFadeIn});
+  final FadeInCallback onFadeIn;
   final Widget child;
   final int duration;
-  FadeInSplashScreen({@required this.child, this.duration});
   @override
   _FadeInSplashScreenState createState() => _FadeInSplashScreenState();
 }
@@ -67,7 +75,7 @@ class _FadeInSplashScreenState extends State<FadeInSplashScreen> with TickerProv
     ).animate(controller);
     animation.addStatusListener((status){
       if(AnimationStatus.completed == status){
-        // If fade in transition animation completed
+        widget.onFadeIn();
       }
     });
     controller.forward();
