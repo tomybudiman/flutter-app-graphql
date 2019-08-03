@@ -1,6 +1,6 @@
-# gbi_sion_app
+# friends_app
 
-GBI Sion App
+Friends!
 
 ## Getting Started
 

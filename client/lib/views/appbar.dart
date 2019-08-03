@@ -18,9 +18,9 @@ class MyPopupMenuItem extends StatelessWidget {
         ),
         Text(label,
           style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.normal,
-            color: Color.fromRGBO(100,100,100,1)
+              fontSize: 20,
+              fontWeight: FontWeight.normal,
+              color: Color.fromRGBO(100,100,100,1)
           ),
         )
       ],
@@ -29,7 +29,7 @@ class MyPopupMenuItem extends StatelessWidget {
 }
 
 
-class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
+class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
 

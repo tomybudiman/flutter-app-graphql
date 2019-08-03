@@ -1,4 +1,4 @@
-package com.tomybudiman.gbi_sion_app
+package com.tomybudiman.friends_app
 
 import android.os.Bundle
 

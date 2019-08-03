@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:gbi_sion_app/splashscreen.dart';
-import 'package:gbi_sion_app/home/home.dart';
+import 'package:friends_app/views/splashscreen/splashscreen.dart';
+import 'package:friends_app/views/app.dart';
 
 void main() => runApp(MaterialApp(
   home: SplashScreen(),
