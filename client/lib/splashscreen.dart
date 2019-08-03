@@ -8,9 +8,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  void navigateHome(context){
-    Navigator.pushReplacementNamed(context, "/home");
-  }
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -33,6 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     "Brand Text",
                     style: TextStyle(
                       fontSize: 40,
+                      letterSpacing: 1,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w300,
                       fontFamily: "RobotoCondensed",
@@ -45,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
             duration: 1000,
             onFadeIn: (){
               Future.delayed(Duration(milliseconds: 500), (){
-                navigateHome(context);
+                Navigator.pushReplacementNamed(context, "/home");
               });
             },
           )
