@@ -7,7 +7,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: Scaffold(
-        appBar: MyAppBar()
+        appBar: MyAppBar(),
+        bottomNavigationBar: MyBottomAppBar()
       ),
     );
   }

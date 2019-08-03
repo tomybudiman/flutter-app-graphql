@@ -72,9 +72,9 @@ flutter:
   fonts:
     - family: RobotoCondensed
       fonts:
-        - asset: fonts/RobotoCondensed-Light.ttf
-        - asset: fonts/RobotoCondensed-Regular.ttf
-        - asset: fonts/RobotoCondensed-Bold.ttf
+        - asset: assets/fonts/RobotoCondensed-Light.ttf
+        - asset: assets/fonts/RobotoCondensed-Regular.ttf
+        - asset: assets/fonts/RobotoCondensed-Bold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
