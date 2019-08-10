@@ -10,13 +10,12 @@ const {RequestChangePassword} = require("../schema");
 const {User} = require("../../models");
 
 const privateKey = fs.readFileSync("./src/key/private.key", "utf8");
-const publicKey = fs.readFileSync("./src/key/public.key", "utf8");
 const jwtOptions = {
   expiresIn: process.env.JWT_AUTH_DURATION,
   issuer: process.env.JWT_ISSUER,
   subject: process.env.JWT_SUBJECT,
   algorithm: process.env.JWT_ALGORITHM
-}
+};
 
 const requestChangePassword = {
   type: RequestChangePassword,

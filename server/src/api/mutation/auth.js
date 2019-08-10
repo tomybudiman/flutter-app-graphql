@@ -17,7 +17,7 @@ const jwtOptions = {
   issuer: process.env.JWT_ISSUER,
   subject: process.env.JWT_SUBJECT,
   algorithm: process.env.JWT_ALGORITHM
-}
+};
 
 const login = {
   type: LoginType,
@@ -66,7 +66,7 @@ const login = {
       throw err
     }
   }
-}
+};
 
 const loginVerify = {
   type: LoginType,
@@ -123,7 +123,7 @@ const loginVerify = {
       throw err
     }
   }
-}
+};
 
 const resetPassword = {
   type: ChangePassword,
@@ -184,6 +184,6 @@ const resetPassword = {
       throw err
     }
   }
-}
+};
 
 module.exports = {login, loginVerify, resetPassword};

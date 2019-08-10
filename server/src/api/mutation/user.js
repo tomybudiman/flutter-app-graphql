@@ -1,8 +1,5 @@
 const {
-  GraphQLInt,
-  GraphQLList,
-  GraphQLString,
-  GraphQLObjectType
+  GraphQLString
 } = require("graphql");
 const bcrypt = require("bcrypt");
 
@@ -53,6 +50,6 @@ const createUser = {
       throw err
     }
   }
-}
+};
 
 module.exports = {createUser}
