@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:friends_app/others.dart';
 
 typedef void FadeInCallback();
 
@@ -8,6 +9,13 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  Future<Null> checkAuth(BuildContext context) async {
+    String token = await secureStorage.read(key: "logintoken");
+    if(token == null){
+    }else{
+      Navigator.pushReplacementNamed(context, "/home");
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -20,21 +28,21 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Image.asset(
-                  "assets/images/default_logo_256.png",
+                  "assets/images/church_256.png",
                   width: 56,
                   height: 56,
                 ),
                 Container(
                   margin: EdgeInsets.only(left: 16),
                   child: Text(
-                    "Brand Text",
+                    "GBI Sion",
                     style: TextStyle(
-                      fontSize: 40,
+                      fontSize: 48,
                       letterSpacing: 1,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w300,
                       fontFamily: "RobotoCondensed",
-                      color: Color.fromRGBO(100,100,100,1),
+                      color: Color.fromRGBO(100,100,100,.7),
                     ),
                   ),
                 ),
@@ -43,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
             duration: 1000,
             onFadeIn: (){
               Future.delayed(Duration(milliseconds: 500), (){
-                Navigator.pushReplacementNamed(context, "/home");
+                checkAuth(context);
               });
             },
           )

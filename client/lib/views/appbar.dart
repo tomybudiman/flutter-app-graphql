@@ -45,7 +45,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
           offset: Offset(0, 8),
           icon: Icon(
             Icons.menu,
-            color: Color.fromRGBO(100,100,100,.6),
+            color: Color.fromRGBO(100,100,100,.7),
             size: 28,
           ),
           onSelected: (test){
@@ -77,7 +77,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
       ],
       backgroundColor: Color.fromRGBO(255,255,255,1),
       title: Text(
-        "Friends!",
+        "My Church",
         style: TextStyle(
           fontSize: 28,
           letterSpacing: 1,
@@ -117,8 +117,8 @@ class MyBottomAppBar extends StatefulWidget {
 class _MyBottomAppBarState extends State<MyBottomAppBar> with SingleTickerProviderStateMixin {
   TabController tabController;
   static final myTabs = <Widget>[
-    MyBottomTabItem(label: "CHATS"),
-    MyBottomTabItem(label: "CONTACT")
+    MyBottomTabItem(label: "Home"),
+    MyBottomTabItem(label: "Event")
   ];
   @override
   void initState(){
@@ -157,4 +157,3 @@ class _MyBottomAppBarState extends State<MyBottomAppBar> with SingleTickerProvid
     );
   }
 }
-
