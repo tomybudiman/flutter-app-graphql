@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:friends_app/helpers/helpers.dart';
 
 class MyPopupMenuItem extends StatelessWidget {
   MyPopupMenuItem({this.icon, this.label});
@@ -13,7 +14,7 @@ class MyPopupMenuItem extends StatelessWidget {
         Container(
           child: Icon(
             icon,
-            color: Color.fromRGBO(100,100,100,.6),
+            color: HexToColor("#74b9ff"),
             size: 20,
           ),
           margin: EdgeInsets.only(right: 12),
@@ -23,14 +24,13 @@ class MyPopupMenuItem extends StatelessWidget {
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.normal,
-            color: Color.fromRGBO(100,100,100,1)
+            color: HexToColor("#636e72")
           ),
         )
       ],
     );
   }
 }
-
 
 class MyAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
@@ -45,7 +45,7 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
           offset: Offset(0, 8),
           icon: Icon(
             Icons.menu,
-            color: Color.fromRGBO(100,100,100,.7),
+            color: HexToColor("#74b9ff"),
             size: 28,
           ),
           onSelected: (test){
@@ -75,15 +75,15 @@ class MyAppBar extends StatelessWidget with PreferredSizeWidget {
           ],
         )
       ],
-      backgroundColor: Color.fromRGBO(255,255,255,1),
+      backgroundColor: Colors.white,
       title: Text(
-        "My Church",
+        "App Bar",
         style: TextStyle(
           fontSize: 28,
           letterSpacing: 1,
           fontWeight: FontWeight.w300,
           fontFamily: "RobotoCondensed",
-          color: Color.fromRGBO(100,100,100,1),
+          color: HexToColor("#636e72"),
         ),
       ),
     );
@@ -101,13 +101,12 @@ class MyBottomTabItem extends StatelessWidget {
         style: TextStyle(
           fontSize: 16,
           fontFamily: "RobotoCondensed",
-          color: Color.fromRGBO(100,100,100,1)
+          color: HexToColor("#74b9ff")
         ),
       ),
     );
   }
 }
-
 
 class MyBottomAppBar extends StatefulWidget {
   @override
@@ -118,7 +117,7 @@ class _MyBottomAppBarState extends State<MyBottomAppBar> with SingleTickerProvid
   TabController tabController;
   static final myTabs = <Widget>[
     MyBottomTabItem(label: "Home"),
-    MyBottomTabItem(label: "Event")
+    MyBottomTabItem(label: "Events")
   ];
   @override
   void initState(){
@@ -152,7 +151,7 @@ class _MyBottomAppBarState extends State<MyBottomAppBar> with SingleTickerProvid
         indicatorWeight: 4,
         controller: tabController,
         labelPadding: EdgeInsets.only(top: 4, bottom: 4),
-        indicatorColor: Color.fromRGBO(100,100,100,.6)
+        indicatorColor: HexToColor("#74b9ff")
       )
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:friends_app/others.dart';
+import 'package:friends_app/helpers/helpers.dart';
 
 typedef void FadeInCallback();
 
@@ -12,6 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<Null> checkAuth(BuildContext context) async {
     String token = await secureStorage.read(key: "logintoken");
     if(token == null){
+      Navigator.pushReplacementNamed(context, "/auth");
     }else{
       Navigator.pushReplacementNamed(context, "/home");
     }
@@ -28,21 +30,21 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Image.asset(
-                  "assets/images/church_256.png",
+                  "assets/images/default_logo_256.png",
                   width: 56,
                   height: 56,
                 ),
                 Container(
                   margin: EdgeInsets.only(left: 16),
                   child: Text(
-                    "GBI Sion",
+                    "Test Brand",
                     style: TextStyle(
                       fontSize: 48,
                       letterSpacing: 1,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w300,
                       fontFamily: "RobotoCondensed",
-                      color: Color.fromRGBO(100,100,100,.7),
+                      color: HexToColor("#636e72"),
                     ),
                   ),
                 ),
